@@ -29,11 +29,11 @@ jobs:
         run: terraform init
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-          TF_WORKSPACE: dev
+          TF_WORKSPACE: test
 
       - name: Terraform Workspace
         id: wsp
-        run: terraform workspace select dev
+        run: terraform workspace select test
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
